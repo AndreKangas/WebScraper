@@ -2,17 +2,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const path = require('path');
 const fs = require('fs');
-const { rejects } = require('assert');
 
-// axios.get("https://www.giantitp.com/Comics.html").then((response) => {
-//   const $ = cheerio.load(response.data);
-//   console.log($('.NoIndent img').eq(1).attr('src'));
-// });
-
-// async function named(){
-
-// }
-// named();
 
 async function download(url, filename){
   const writer = fs.createWriteStream(path.resolve(__dirname, filename));
